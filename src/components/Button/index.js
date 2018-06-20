@@ -5,10 +5,10 @@
 import React from 'react'
 import { Wrapper } from './styled'
 
-const Button = () => {
+const Button = (props) => {
   return (
     <Wrapper>
-      {/* Magical component here*/}  
+      {props.children}
     </Wrapper>
   );
 }

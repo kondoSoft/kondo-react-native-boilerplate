@@ -6,5 +6,6 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.View`
 	background: red;
-	flex: 1;
+	width: 50px;
+	height: 50px;
 `

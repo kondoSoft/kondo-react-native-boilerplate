@@ -10,11 +10,16 @@ import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'remote-redux-devtools';
 import logger from 'redux-logger'
 
+import { NativeRouter, Route, Link } from 'react-router-native'
+
+import Home from './src/containers/Home'
+
 const store = createStore(
-  () => ({hello: 'hola'})
-  , composeWithDevTools(
+  () => ({hello: 'hola'}),
+  composeWithDevTools(
     applyMiddleware(logger)
-  ))
+  )
+)
 
 import {
   Platform,
@@ -35,17 +40,9 @@ export default class App extends Component<Props> {
   render() {
     return (
       <Provider store={store}>
-        <View style={styles.container}>
-          <Text style={styles.welcome}>
-            Welcome to React Native!
-          </Text>
-          <Text style={styles.instructions}>
-            To get started, edit App.js
-          </Text>
-          <Text style={styles.instructions}>
-            {instructions}
-          </Text>
-        </View>
+        <NativeRouter>
+          <Route exact path="/" component={Home}/>
+        </NativeRouter>
       </Provider>
     );
   }
