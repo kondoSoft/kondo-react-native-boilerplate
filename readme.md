@@ -2,7 +2,7 @@ React native applications in seconds!
 
 A ready to go react native boilerplate for the efficient developer, focused on quality and speed.
 
-Created by ![Carlos Gonzalez](https://kondosoft.com/#karly_team_449359) and ![the kondo team](https://kondosoft.com/#karly_team_449359.
+Created by [Carlos Gonzalez](https://kondosoft.com/#karly_team_449359) and [the kondo team](https://kondosoft.com/#karly_team_449359).
 
 ## What kondo-react-native-boilerplate is all about?
 
