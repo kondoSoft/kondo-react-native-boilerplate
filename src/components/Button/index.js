@@ -4,11 +4,14 @@
 
 import React from 'react'
 import { Wrapper } from './styled'
+import {
+	Text
+} from 'react-native'
 
 const Button = (props) => {
   return (
     <Wrapper>
-      {props.children}
+      <Text>{props.children}</Text>
     </Wrapper>
   );
 }
