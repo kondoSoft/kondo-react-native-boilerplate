@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "generate": "plop --plopfile internals/plop.js",
+    "setup": "node ./internals/scripts/setup.js",
     "test": "jest"
   },
   "dependencies": {
@@ -15,8 +16,9 @@
     "babel-jest": "23.0.1",
     "babel-preset-react-native": "4.0.0",
     "jest": "23.1.0",
+    "plop": "1.8.0",
     "react-test-renderer": "16.3.1",
-    "plop": "1.8.0"
+    "shelljs": "^0.8.2"
   },
   "jest": {
     "preset": "react-native"
