@@ -5,6 +5,17 @@
  */
 
 import React, { Component } from 'react';
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'remote-redux-devtools';
+import logger from 'redux-logger'
+
+const store = createStore(
+  () => ({hello: 'hola'})
+  , composeWithDevTools(
+    applyMiddleware(logger)
+  ))
+
 import {
   Platform,
   StyleSheet,
@@ -23,17 +34,19 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
+      <Provider store={store}>
+        <View style={styles.container}>
+          <Text style={styles.welcome}>
+            Welcome to React Native!
+          </Text>
+          <Text style={styles.instructions}>
+            To get started, edit App.js
+          </Text>
+          <Text style={styles.instructions}>
+            {instructions}
+          </Text>
+        </View>
+      </Provider>
     );
   }
 }
