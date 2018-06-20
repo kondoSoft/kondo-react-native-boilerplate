@@ -14,6 +14,9 @@ Do the same with `npm run generate component`
 Styled Component ready
 	Don't waste you're time with inline styling, when you can have that beautifull library.
 
+Redux ready
+	Redux, already set up, and redux tools ready, for [chrome](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd), for [firefox](https://addons.mozilla.org/es/firefox/addon/remotedev/)
+
 React Router
 	The easiest to use ready to go Routing for mobile.
 
