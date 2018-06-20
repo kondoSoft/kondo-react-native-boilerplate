@@ -1,6 +1,6 @@
 const initialState = {}
 
-const home = (state, {type, payload}) => {
+const home = (state=initialState, {type, payload}) => {
 	switch (type) {
 		case 'EXAMPLE_CASE':
 		  return state
