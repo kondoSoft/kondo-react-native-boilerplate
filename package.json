@@ -6,7 +6,8 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "generate": "plop --plopfile internals/plop.js",
     "setup": "node ./internals/scripts/setup.js",
-    "test": "jest"
+    "test": "jest",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "react": "^16.3.1",
@@ -19,12 +20,23 @@
   "devDependencies": {
     "babel-jest": "23.0.1",
     "babel-preset-react-native": "4.0.0",
+    "husky": "^0.14.3",
     "jest": "23.1.0",
+    "lint-staged": "^7.2.2",
     "plop": "1.8.0",
+    "prettier-standard": "^8.0.1",
     "react-native-git-upgrade": "^0.2.7",
     "react-test-renderer": "16.3.1",
     "remote-redux-devtools": "^0.5.12",
     "shelljs": "^0.8.2"
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
   },
   "jest": {
     "preset": "react-native"
